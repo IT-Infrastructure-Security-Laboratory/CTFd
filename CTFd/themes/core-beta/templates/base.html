@@ -7,6 +7,10 @@
   <link rel="shortcut icon" href="{{ Configs.ctf_small_icon }}" type="image/x-icon">
 
   {{ meta | safe }}
+  
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Faculty+Glyphic&display=swap" rel="stylesheet">
 
   {% block stylesheets %}
     {{ Assets.css("assets/scss/main.scss") }}
@@ -37,6 +41,41 @@
   </script>
 
   {{ Configs.theme_header }}
+
+  <!-- css animation background -->
+  <style>
+    body {
+        /* margin: 0;
+        height: 100vh;
+        display: flex;
+        justify-content: center;
+        align-items: center; */
+        
+        animation: gradientFlow 100s ease infinite;
+        background: linear-gradient(270deg, #FFF100, #074799, #FFF100, #074799);
+        background-size: 400% 400%;
+    }
+
+    @keyframes gradientFlow {
+        0% {
+            background-position: 0% 50%;
+        }
+        50% {
+            background-position: 100% 50%;
+        }
+        100% {
+            background-position: 0% 50%;
+        }
+    }
+
+    h1 {
+        color: white;
+        font-size: 3rem;
+        text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+    }
+</style>
+  <!-- akhir -->
+
 </head>
 <body>
 {% include "components/navbar.html" %}
@@ -50,7 +89,7 @@
   <div class="container text-center">
     <a href="https://ctfd.io" class="text-secondary">
       <small class="text-muted">
-        {% trans %}Powered by CTFd{% endtrans %}
+        {% trans %}Powered by Lab IKTI{% endtrans %}
       </small>
     </a>
   </div>
